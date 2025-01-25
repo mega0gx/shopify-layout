@@ -292,69 +292,50 @@ body.dark .search-field i {
         margin-top: 20px;
     }
 }
-
+/* animation bar logos section  */
 @keyframes slide {
-    0% {
+    from {
         transform: translateX(0);
     }
-
-    100% {
-        transform: translateX(-50%);
-        /* Move only half the width for seamless looping */
+    to {
+        transform: translateX(-100%);
     }
-}
-
+} 
 .logos {
     overflow: hidden;
-    padding: 40px 0;
+    padding: 30px 0;
     background-color: gainsboro;
     white-space: nowrap;
     position: relative;
 }
-
-.logos::before,
-.logos::after {
+.logos:before,
+.logos:after{
     position: absolute;
     top: 0;
-    width: 200px;
-    /* Adjust gradient width */
+    width: 250px;
     height: 100%;
     content: "";
     z-index: 2;
 }
-
-.logos::before {
+.logs:before{
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
 }
-
-.logos::after {
+.logs:after{
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
 }
-
-.logos:hover .logos-slide {
+.logos:hover .logos-slide{
     animation-play-state: paused;
 }
 
+
 .logos-slide {
     display: inline-block;
-    animation: 20s slide infinite linear;
-    /* Slower animation for better visibility */
+    animation: 15s slide infinite linear;
 }
 
 .logos-slide img {
-    height: 60px;
-    /* Larger logo size */
-    margin: 0 30px;
-    /* Adjust spacing between logos */
-    filter: grayscale(100%);
-    /* Optional: Add grayscale effect */
-    transition: filter 0.3s ease;
-    /* Smooth transition for hover effect */
-}
-
-.logos-slide img:hover {
-    filter: grayscale(0%);
-    /* Optional: Remove grayscale on hover */
+    height: 50px;
+    margin: 0 40px;
 }

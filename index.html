@@ -72,11 +72,32 @@
         </div>
       </nav>
     </header>
-    <!-- <div class="logos">
+    <div class="logos">
       <div class="logos-slide">
-        <!-- Logos will be dynamically added here using JavaScript -->
+          <img src="./icons/logo-1.svg" alt="logo-1">
+          <img src="./icons/logo-2.svg" alt="logo-2">
+          <img src="./icons/logo-3.svg" alt="logo-3">
+          <img src="./icons/logo-4.svg" alt="logo-4">
+          <img src="./icons/logo-5.svg" alt="logo-5">
+          <img src="./icons/logo-6.svg" alt="logo-6">
       </div>
-    </div> -->
+      <div class="logos-slide">
+          <img src="./icons/logo-1.svg" alt="logo-1">
+          <img src="./icons/logo-2.svg" alt="logo-2">
+          <img src="./icons/logo-3.svg" alt="logo-3">
+          <img src="./icons/logo-4.svg" alt="logo-4">
+          <img src="./icons/logo-5.svg" alt="logo-5">
+          <img src="./icons/logo-6.svg" alt="logo-6">
+      </div>
+      <div class="logos-slide">
+          <img src="./icons/logo-1.svg" alt="logo-1">
+          <img src="./icons/logo-2.svg" alt="logo-2">
+          <img src="./icons/logo-3.svg" alt="logo-3">
+          <img src="./icons/logo-4.svg" alt="logo-4">
+          <img src="./icons/logo-5.svg" alt="logo-5">
+          <img src="./icons/logo-6.svg" alt="logo-6">
+      </div>
+  </div>
     <script>
       const body = document.querySelector("body"),
         nav = document.querySelector("nav"),
@@ -117,34 +138,6 @@
           nav.classList.remove("active");
         }
       });
-      // Array of logo image URLs
-      const logos = [
-        "./icons/logo-1.svg",
-        "./icons/logo-2.svg",
-        "./icons/logo-3.svg",
-        "./icons/logo-4.svg",
-        "./icons/logo-5.svg",
-        "./icons/logo-6.svg",
-      ];
-
-      // Function to create logo elements
-      function createLogos() {
-        const logosSlide = document.querySelector(".logos-slide");
-
-        // Duplicate the logos array to create a seamless loop
-        const duplicatedLogos = [...logos, ...logos];
-
-        // Create and append logo elements
-        duplicatedLogos.forEach((logo) => {
-          const img = document.createElement("img");
-          img.src = logo;
-          img.alt = "logo";
-          logosSlide.appendChild(img);
-        });
-      }
-
-      // Initialize the logos
-      createLogos();
     </script>
   </body>
 </html>
