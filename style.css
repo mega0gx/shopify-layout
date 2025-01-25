@@ -11,7 +11,7 @@
 
 /* ===== Colours ===== */
 :root {
-    --body-color: #011241;
+    --body-color: #282C37;
     --nav-color: #00a589;
     --side-nav: #010718;
     --text-color: #FFF;
@@ -292,24 +292,42 @@ body.dark .search-field i {
         margin-top: 20px;
     }
 }
+
 /* hero section  */
 .hero {
     width: 100%;
-    height: 90vh; /* Adjust as needed */
-    background-image: url('image.jpg');
+    height: 90vh;
+    background-image: url('./image.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
+
+/* Adjust height for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+}
+
 
 /* animation bar logos section  */
 @keyframes slide {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
-} 
+}
+
 .logos {
     overflow: hidden;
     padding: 30px 0;
@@ -317,8 +335,9 @@ body.dark .search-field i {
     white-space: nowrap;
     position: relative;
 }
+
 .logos:before,
-.logos:after{
+.logos:after {
     position: absolute;
     top: 0;
     width: 250px;
@@ -326,15 +345,18 @@ body.dark .search-field i {
     content: "";
     z-index: 2;
 }
-.logs:before{
+
+.logs:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255,255,255,0), white);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
 }
-.logs:after{
+
+.logs:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0), white);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
-.logos:hover .logos-slide{
+
+.logos:hover .logos-slide {
     animation-play-state: paused;
 }
 
@@ -347,4 +369,47 @@ body.dark .search-field i {
 .logos-slide img {
     height: 50px;
     margin: 0 40px;
+}
+
+/* feautured product section */
+.featured-collection {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured-collection .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white
+}
+
+.featured-collection .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.featured-collection .subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.featured-collection .grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 15px;
+    height: 800px;
+}
+
+.featured-collection .grid-item {
+    background-color: #31bd87;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 40px;
 }
